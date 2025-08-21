@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>नव गजानन मित्र मंडळ - वार्षिक अहवाल</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Hind+Kolhapur:wght@400;500;600;700&display=swap');
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(120deg, #f5f7fa 0%, #e4e8f0 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      color: #333;
+      padding: 20px;
+    }
+
+    .container {
+      background: white;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+      max-width: 600px;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 8px;
+      background: linear-gradient(90deg, #e0730e, #e0730e, #e0730e);
+    }
+
+    .header {
+      margin-bottom: 30px;
+      position: relative;
+    }
+
+    .header h2 {
+      font-family: 'Hind Kolhapur', sans-serif;
+      margin-bottom: 12px;
+      font-size: 32px;
+      font-weight: 700;
+      color: #e0730e;
+      letter-spacing: 0.5px;
+    }
+
+    .header h3 {
+      margin-bottom: 8px;
+      font-size: 22px;
+      font-weight: 500;
+      color: #4a5568;
+    }
+
+    .year-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #e0730e, #e0730e);
+      color: white;
+      padding: 8px 22px;
+      border-radius: 30px;
+      font-size: 18px;
+      margin-top: 15px;
+      font-weight: 600;
+      box-shadow: 0 5px 15px rgba(67, 97, 238, 0.2);
+    }
+
+    .logo-container {
+      margin: 30px auto;
+      width: 180px;
+      height: 180px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .logo {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      border: 4px solid white;
+      transition: all 0.3s ease;
+    }
+
+    .logo-border {
+      position: absolute;
+      width: 190px;
+      height: 190px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #e0730e, #e0730ea3, #e0730e);
+      z-index: -1;
+    }
+
+    .stats-container {
+      display: flex;
+      justify-content: space-around;
+      margin: 30px 0;
+      flex-wrap: wrap;
+    }
+
+    .stat {
+      padding: 20px;
+      margin: 10px;
+      flex: 1;
+      min-width: 140px;
+      background: #f8fafc;
+      border-radius: 12px;
+      border-left: 4px solid #e0730e;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+      transition: all 0.3s ease;
+    }
+
+    .stat:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .stat-number {
+      font-size: 28px;
+      font-weight: 700;
+      color: #e0730e;
+      display: block;
+    }
+
+    .stat-label {
+      font-size: 16px;
+      margin-top: 8px;
+      color: #4a5568;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px 40px;
+      font-size: 18px;
+      font-weight: 600;
+      color: white;
+      background: linear-gradient(135deg, #e0730e, #e0730e);
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 25px rgba(67, 97, 238, 0.3);
+      position: relative;
+      overflow: hidden;
+      margin-top: 20px;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 30px rgba(67, 97, 238, 0.4);
+    }
+
+    .btn:active {
+      transform: translateY(0);
+    }
+
+    .btn i {
+      margin-right: 12px;
+      font-size: 22px;
+    }
+
+    .footer {
+      margin-top: 35px;
+      padding-top: 25px;
+      border-top: 1px solid #edf2f7;
+      color: #718096;
+      font-size: 16px;
+    }
+
+    .decoration {
+      display: flex;
+      justify-content: center;
+      margin: 25px 0;
+      gap: 15px;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #4361ee;
+      opacity: 0.6;
+    }
+
+    .dot:nth-child(2) {
+      background: #3a0ca3;
+    }
+
+    .dot:nth-child(3) {
+      background: #7209b7;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 30px 20px;
+      }
+      
+      .header h2 {
+        font-size: 28px;
+      }
+      
+      .header h3 {
+        font-size: 20px;
+      }
+      
+      .logo-container {
+        width: 150px;
+        height: 150px;
+      }
+      
+      .logo-border {
+        width: 160px;
+        height: 160px;
+      }
+      
+      .btn {
+        padding: 16px 35px;
+        font-size: 16px;
+      }
+      
+      .stats-container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h2>नव गजानन मित्र मंडळ - ट्रस्ट</h2>
+      <h3>वार्षिक अहवाल</h3>
+      <div class="year-badge">२०२३-२४</div>
+    </div>
+
+    <div class="decoration">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+
+    <!-- Stats Section -->
+    <!-- <div class="stats-container">
+      <div class="stat">
+        <span class="stat-number">५०+</span>
+        <span class="stat-label">कार्यक्रम</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">२००+</span>
+        <span class="stat-label">सदस्य</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">१०+</span>
+        <span class="stat-label">प्रकल्प</span>
+      </div>
+    </div> -->
+
+    <!-- Logo/Image -->
+    <div class="logo-container">
+      <div class="logo-border"></div>
+      <img src="ganpati.jpeg" alt="Trust Logo" class="logo">
+    </div>
+
+    <!-- Button to open PDF -->
+    <a href="https://drive.google.com/file/d/1b9f6HslDSgPH7G8L2bPvyktpCZ-Xb5gE/view?usp=drivesdk" target="_blank" class="btn">
+      <i class="fas fa-download"></i> वार्षिक अहवाल डाउनलोड करा
+    </a>
+    
+    <div class="footer">
+      नव गजानन मित्र मंडळ ट्रस्ट © २०२३-२४
+    </div>
+  </div>
+</body>
+</html>
